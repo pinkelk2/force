@@ -1,0 +1,31 @@
+@isTest
+private class ValidateAccessSupport_Test 
+{
+
+    static testMethod void test () 
+    {
+        Account a1 = new Account (Name='TestAccount1');
+        insert a1;
+        
+        a1.Name = 'TestAccount1Changed';
+        update a1;
+        
+        System.assertEquals('TestAccount1Changed', [SELECT Name FROM Account WHERE Id = :a1.Id LIMIT 1].Name);
+        
+        Opportunity o1 = new Opportunity (Name='TestOpp1', StageName='Test', CloseDate=System.today().addDays(30));
+        insert o1;
+        
+        o1.Name = 'TestOpp1Changed';
+        update o1;
+        
+        o1.Amount = 1000;
+        update o1;
+        
+        System.assertEquals('TestOpp1Changed', [SELECT Name FROM Opportunity WHERE Id = :o1.Id LIMIT 1].Name);
+        
+        ValidateAccessSupport.disabled = true;
+        
+        o1.Amount = 2000;
+        update o1; 
+    }
+}
