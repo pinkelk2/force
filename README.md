@@ -20,7 +20,7 @@ This is all the triggers need to do:
     if (trigger.isInsert) ValidateAccessSupport.validateInsertAccess (trigger.new);
     if (trigger.isUpdate) ValidateAccessSupport.validateUpdateAccess (trigger.new, trigger.oldMap);
 
-The triggers are simple, and can be implemented on any object for which you want to enforce CRUD and FLS validation.  
+The triggers are simple, and can be implemented on any object for which you want to enforce CRUD and FLS validation.  You can of course add the above code to existing after triggers if you would prefer.
 
 Let me know how this works for you, or if you have any questions.
 
