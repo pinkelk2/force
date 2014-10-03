@@ -9,9 +9,9 @@ This GitHub repository contains a single Class, ValidateAccessSupport, that can 
 
 ValidateAccessSupport includes a public static variable, and 2 public static methods:
 
-*  public static Boolean disabled = false;  //  set this to true in a transaction to disable validation
-*  validateInsertAccess (list<SObject> newTrigger)  //  called to validate after insert
-*  validateUpdateAccess (list<SObject> newTrigger, map<Id,SObject> oldMap)  //  called to validate after update
+    public static Boolean disabled = false;  //  set this to true in a transaction to disable validation
+    validateInsertAccess (list<SObject> newTrigger)  //  called to validate after insert
+    validateUpdateAccess (list<SObject> newTrigger, map<Id,SObject> oldMap)  //  called to validate after update
 
 The repository contains example triggers for the standard Account and Opportunity objects, as well as an example test method, assuming you have implemented the example triggers.
 
