@@ -1,5 +1,5 @@
-Useful stuff for the force.com platform
-=======================================
+Force.com Platform - CRUD and FLS Validation
+============================================
 
 The Salesforce Security Review team require that managed custom applications include explicit validation of CRUD and FLS (Field Level Security).  
 
